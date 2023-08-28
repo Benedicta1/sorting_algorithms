@@ -23,12 +23,12 @@ void shell_sort(int *array, size_t size)
 
 	for (gap = Knuth_max; gap > 0; gap = (gap - 1) / 3)
 	{
-		
+
 		for (a = gap; a < c; a++)
 		{
-			
+
 			temp = array[a];
-			
+
 			for (b = a; b >= gap && array[b - gap] > temp; b -= gap)
 			{
 				array[b] = array[b - gap];
