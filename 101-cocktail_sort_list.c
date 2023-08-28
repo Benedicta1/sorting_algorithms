@@ -1,12 +1,10 @@
 #include "sort.h"
 
 /**
- * dll_adj_swap - This swaps two adjacent nodes
- * of a doubly linked list
- * @list: This is a doubly linked list of integers that
- * will be sorted
- * @left: This moves the node closer to the head
- * @right: This moves the node closer to the tail
+ * dll_adj_swap - This swaps two adjacent nodes of a doubly linked list
+ * @list: doubly linked list of integers to be sorted
+ * @left: This gets the node closer to the head
+ * @right: This gets the node closer to the tail
  */
 void dll_adj_swap(listint_t **list, listint_t *left, listint_t *right)
 {
@@ -30,8 +28,7 @@ void dll_adj_swap(listint_t **list, listint_t *left, listint_t *right)
 /**
  * cocktail_sort_list - This sorts a doubly linked list of integers
  * in ascending order using an cocktail shaker sort algorithm
- * @list: This is a doubly linked list od integers that
- * will bw sorted
+ * @list: This is a doubly linked list of integers to be sorted
  */
 void cocktail_sort_list(listint_t **list)
 {
@@ -55,7 +52,7 @@ void cocktail_sort_list(listint_t **list)
 			else
 				temp = temp->next;
 		}
-		if (!temp->next)  /* first loop, measuring list */
+		if (!temp->next)
 			shake_range = checks;
 		if (swapped_f)
 			temp = temp->prev;
